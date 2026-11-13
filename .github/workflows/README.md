@@ -359,6 +359,7 @@ branch protection.
 
 | Workflow | Schedule (UTC) | Other triggers | What it does |
 |---|---|---|---|
+| `fork-upstream-sync.yml` | daily 07:23 | dispatch | On `isaac-wetenviro/hermes-agent` only, merges upstream `main` into fork `main`; conflicts fail the run for manual resolution. |
 | `canary-release.yml` | daily 06:41 | dispatch | See [Canary](#canary-releases) |
 | `skills-index.yml` | 06:00, 18:00 | push, dispatch | See above |
 | `skills-index-freshness.yml` | every 4 h | dispatch | Upstream only. Opens an issue if `/docs/api/skills-index.json` is more than 26 h stale, missing, or a source collapsed. Also checks CORS on `/docs/api/plugins.json`. |
